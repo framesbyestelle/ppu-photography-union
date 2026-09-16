@@ -4,12 +4,14 @@ Website for PPU, McGill Engineering Undergraduate Society's student photography 
 
 ## Structure
 
-- `index.html` — home page: hero, services, portfolio teaser, FAQ, contact
+- `index.html` — home page: hero, services, "what we shoot" categories, portfolio teaser, FAQ, contact
 - `pricing.html` — pricing plans
+- `team.html` — meet the team
+- `book.html` — booking request form (embedded)
 - `gallery.html` — photo gallery with a lightbox viewer
 - `assets/css/style.css` — all styling (design tokens at the top)
 - `assets/js/main.js` — mobile nav toggle + gallery lightbox
-- `assets/images/` — logo, hero photos, and `gallery/` (event photos)
+- `assets/images/` — logo, hero/category photos, `team/` (headshots), and `gallery/` (event photos)
 
 ## Running locally
 
