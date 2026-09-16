@@ -17,12 +17,12 @@
   --radius-pill: 999px;
   --shadow: 0 12px 30px -12px rgba(20, 8, 8, 0.18);
   --container: 1120px;
-  --font-head: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-head: "Fraunces", "Iowan Old Style", "Georgia", serif;
   --font-body: "DM Sans", "Segoe UI", sans-serif;
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-optical-sizing: auto; }
 
 body {
   margin: 0;
@@ -238,6 +238,23 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   padding: 72px 0 40px;
   text-align: center;
 }
+.hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.hero-logo img { width: 56px; height: 56px; }
+.hero-logo span {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: var(--ink);
+}
 .hero h1 { max-width: 780px; margin: 0 auto 20px; }
 .hero .lede { margin: 0 auto 32px; }
 .hero-actions {
@@ -261,13 +278,29 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 }
 
 .service-card {
+  display: block;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
-.service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+.service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--accent); }
+.service-card:hover .card-link { color: var(--accent); }
+.service-card:hover .card-link svg { transform: translateX(3px); }
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.86rem;
+  color: var(--ink);
+}
+.card-link svg { transition: transform 0.15s ease; }
 
 .service-card__media {
   height: 260px;
@@ -494,12 +527,17 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 @media (min-width: 720px) { .category-strip { grid-template-columns: repeat(5, 1fr); } }
 
 .category-tile {
+  display: block;
   position: relative;
   border-radius: var(--radius-sm);
   overflow: hidden;
   aspect-ratio: 3/4;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.category-tile img { width: 100%; height: 100%; object-fit: cover; }
+.category-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.category-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s ease; }
+.category-tile:hover img { transform: scale(1.06); }
 .category-tile::after {
   content: "";
   position: absolute;
@@ -539,16 +577,47 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 /* ==========================================================================
    Gallery
    ========================================================================== */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+.filter-tab {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.86rem;
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.filter-tab:hover { border-color: var(--accent); }
+.filter-tab[aria-current="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+.filter-empty {
+  text-align: center;
+  color: var(--muted);
+  max-width: 520px;
+  margin: 32px auto 0;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 14px;
-  margin-top: 44px;
+  margin-top: 32px;
 }
+.gallery-item[hidden] { display: none; }
 @media (min-width: 640px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 960px) { .gallery-grid { grid-template-columns: repeat(4, 1fr); } }
 
 .gallery-item {
+  margin: 0;
   position: relative;
   border-radius: var(--radius-sm);
   overflow: hidden;

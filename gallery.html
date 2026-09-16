@@ -8,7 +8,7 @@
 <link rel="icon" href="assets/images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,300..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -49,42 +49,58 @@
   <section class="hero container">
     <span class="eyebrow center" style="display:block;">Gallery</span>
     <h1>Collection of the events shot with PPU</h1>
-    <p class="lede center">Click any photo to view it full-size.</p>
+    <p class="lede center">Browse by event type, or click any photo to view it full-size.</p>
   </section>
 
   <section class="section" style="padding-top:0;">
     <div class="container">
+      <div class="filter-tabs" data-filter-tabs>
+        <button type="button" class="filter-tab" data-filter="all" aria-current="true">All</button>
+        <button type="button" class="filter-tab" data-filter="headshots">Headshots</button>
+        <button type="button" class="filter-tab" data-filter="eweek">E-Week</button>
+        <button type="button" class="filter-tab" data-filter="techfair">TechFair &amp; Networking</button>
+        <button type="button" class="filter-tab" data-filter="blues">Blues</button>
+        <button type="button" class="filter-tab" data-filter="grad">Grads &amp; Formals</button>
+      </div>
+
+      <p class="filter-empty" data-filter-empty hidden>We don't have photos posted for this category yet — check our <a href="https://www.instagram.com/eus_ppu/" target="_blank" rel="noopener" style="color:var(--accent); font-weight:600;">Instagram</a> in the meantime, or <a href="book.html" style="color:var(--accent); font-weight:600;">book us</a> to help us fill it.</p>
+
       <div class="gallery-grid" data-gallery>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-01.jpg" alt="PPU event photography, shot 1" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-02.jpg" alt="PPU event photography, shot 2" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-03.jpg" alt="PPU event photography, shot 3" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-04.jpg" alt="PPU event photography, shot 4" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-05.jpg" alt="PPU event photography, shot 5" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-06.jpg" alt="PPU event photography, shot 6" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-07.jpg" alt="PPU event photography, shot 7" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-08.jpg" alt="PPU event photography, shot 8" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-09.jpg" alt="PPU event photography, shot 9" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-10.jpg" alt="PPU event photography, shot 10" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-11.jpg" alt="PPU event photography, shot 11" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-12.jpg" alt="PPU event photography, shot 12" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-13.jpg" alt="PPU event photography, shot 13" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-14.jpg" alt="PPU event photography, shot 14" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-15.jpg" alt="PPU event photography, shot 15" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-16.jpg" alt="PPU event photography, shot 16" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-17.jpg" alt="PPU event photography, shot 17" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-18.jpg" alt="PPU event photography, shot 18" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-19.jpg" alt="PPU event photography, shot 19" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-20.jpg" alt="PPU event photography, shot 20" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-21.jpg" alt="PPU event photography, shot 21" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-22.jpg" alt="PPU event photography, shot 22" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-23.jpg" alt="PPU event photography, shot 23" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-24.jpg" alt="PPU event photography, shot 24" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-25.jpg" alt="PPU event photography, shot 25" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-26.jpg" alt="PPU event photography, shot 26" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-27.jpg" alt="PPU event photography, shot 27" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-28.jpg" alt="PPU event photography, shot 28" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-29.jpg" alt="PPU event photography, shot 29" loading="lazy"></figure>
-        <figure class="gallery-item"><img src="assets/images/gallery/gallery-30.jpg" alt="PPU event photography, shot 30" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="headshots"><img src="assets/images/category-headshots.jpg" alt="Professional headshot session"></figure>
+        <figure class="gallery-item" data-category="eweek"><img src="assets/images/category-eweek.jpg" alt="E-Week engineering competition event"></figure>
+        <figure class="gallery-item" data-category="techfair"><img src="assets/images/category-techfair.jpg" alt="TechFair networking and career event"></figure>
+        <figure class="gallery-item" data-category="grad"><img src="assets/images/category-graduation.jpg" alt="Graduation photography"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/category-blues.jpg" alt="Weekly Blues pub night at McGill Engineering"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-01.jpg" alt="PPU event photography, shot 1" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-02.jpg" alt="PPU event photography, shot 2" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-03.jpg" alt="PPU event photography, shot 3" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-04.jpg" alt="PPU event photography, shot 4" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-05.jpg" alt="PPU event photography, shot 5" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-06.jpg" alt="PPU event photography, shot 6" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-07.jpg" alt="PPU event photography, shot 7" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-08.jpg" alt="PPU event photography, shot 8" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-09.jpg" alt="PPU event photography, shot 9" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-10.jpg" alt="PPU event photography, shot 10" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-11.jpg" alt="PPU event photography, shot 11" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-12.jpg" alt="PPU event photography, shot 12" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-13.jpg" alt="PPU event photography, shot 13" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-14.jpg" alt="PPU event photography, shot 14" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-15.jpg" alt="PPU event photography, shot 15" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-16.jpg" alt="PPU event photography, shot 16" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-17.jpg" alt="PPU event photography, shot 17" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-18.jpg" alt="PPU event photography, shot 18" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-19.jpg" alt="PPU event photography, shot 19" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-20.jpg" alt="PPU event photography, shot 20" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-21.jpg" alt="PPU event photography, shot 21" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-22.jpg" alt="PPU event photography, shot 22" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-23.jpg" alt="PPU event photography, shot 23" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-24.jpg" alt="PPU event photography, shot 24" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-25.jpg" alt="PPU event photography, shot 25" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-26.jpg" alt="PPU event photography, shot 26" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-27.jpg" alt="PPU event photography, shot 27" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-28.jpg" alt="PPU event photography, shot 28" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-29.jpg" alt="PPU event photography, shot 29" loading="lazy"></figure>
+        <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-30.jpg" alt="PPU event photography, shot 30" loading="lazy"></figure>
       </div>
 
       <div class="hiring-banner">
