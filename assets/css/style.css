@@ -537,6 +537,9 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .team-card__body .handle { font-family: var(--font-head); font-weight: 600; font-size: 0.85rem; color: var(--ink); }
 .team-card__body .handle:hover { color: var(--accent); }
 
+.team-card--alumni img { filter: grayscale(0.6); opacity: 0.85; }
+.team-card--alumni .role { color: var(--muted); }
+
 /* ==========================================================================
    What we shoot (category strip)
    ========================================================================== */
