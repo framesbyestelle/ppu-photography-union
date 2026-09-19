@@ -334,14 +334,6 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   height: 100%;
   object-fit: cover;
 }
-.service-card__media.is-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--ink) 130%);
-}
-.service-card__media.is-icon svg { width: 64px; height: 64px; color: #fff; }
-
 .service-card__body { padding: 24px 26px 30px; }
 .service-card__body h3 { margin-bottom: 8px; }
 .service-card__body p { margin: 0; color: var(--muted); font-size: 0.98rem; }
