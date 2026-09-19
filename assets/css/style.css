@@ -528,6 +528,17 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .team-card__body .meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 8px; }
 .team-card__body .handle { font-family: var(--font-head); font-weight: 600; font-size: 0.85rem; color: var(--ink); }
 .team-card__body .handle:hover { color: var(--accent); }
+.team-card__body .portfolio-link {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.team-card__body .portfolio-link:hover { color: var(--accent-dark); }
 
 .team-card--alumni img { filter: grayscale(0.6); opacity: 0.85; }
 .team-card--alumni .role { color: var(--muted); }
