@@ -38,7 +38,7 @@ There's no admin panel — you edit the HTML/image files directly and push. Ever
    ```html
    <figure class="gallery-item" data-category="blues"><img src="assets/images/gallery/gallery-31.jpg" alt="Describe the photo" loading="lazy"></figure>
    ```
-3. `data-category` controls which filter tab the photo shows under. Valid values: `headshots`, `eweek`, `techfair`, `blues`, `grad`. Use `blues` for general event/nightlife photos — it's the catch-all category with the most photos today.
+3. `data-category` controls which filter tab the photo shows under. Valid values: `headshots`, `eweek`, `techfair` (networking, career fairs, company booths), `blues` (pub nights, parties, themed nights), `grad` (grads and formals). Pick the closest match; the "All" tab shows everything regardless.
 4. Save, commit, push. That's it — the lightbox and filter tabs pick it up automatically.
 
 ### Add or remove a team member
